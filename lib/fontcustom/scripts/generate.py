@@ -37,7 +37,7 @@ m = md5.new()
 cp = 0xf100
 files = []
 
-KERNING = 15
+KERNING = 0
 
 for dirname, dirnames, filenames in os.walk(indir):
 	for filename in filenames:
@@ -73,9 +73,9 @@ for dirname, dirnames, filenames in os.walk(indir):
 			if tmpsvgfile:
 				os.unlink(tmpsvgfile.name)
 
-			# glyph.left_side_bearing = KERNING
-			# glyph.right_side_bearing = KERNING
-			glyph.width = 512
+			glyph.left_side_bearing = KERNING
+			glyph.right_side_bearing = KERNING
+			# glyph.width = 512
 
 			# possible optimization?
 			# glyph.simplify()
