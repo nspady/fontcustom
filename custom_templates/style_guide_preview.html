@@ -1,0 +1,10 @@
+<h2 id="fonticons">Font icons</h2>
+<div class="wicons">
+<% @data[:glyphs].each_with_index do |name, index| %>
+  <div class="glyph">
+    <div class="fs1" ><i class="w-icon-<%= name.split('_')[1] %>"></i></div>
+    <input type="text" readonly="readonly" value=".w-icon-<%= name.split('_')[1] %>"/>
+    <span class='muted'>\<%= (61696+index).to_s(16) %>;</span>
+  </div>
+<% end %>
+</div><!-- .wicons -->
